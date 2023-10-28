@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+        body{
+            background-image: url("w3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" >Weather App</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="https://weather.com/en-IN/?Goto=Redirected">About this app</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://weather.com/en-IN/weather/tenday/l/Rajpath+Area+Delhi?canonicalCityId=bd07c6679ad5069265f742eb66d5d53172210b02b127807d6a47e92807799fbe">Delhi</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/weather/tenday/l/Seattle+WA?canonicalCityId=0795df0bbf6ddfe58c10abd8ce5ed2a901e48b13b3ee35d10cb229baff15ed15">Seattle</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="https://weather.com/en-TT/weather/tenday/l/e5e5d9e304a310cd9f5387b75551e92f5e8cab07d343b649a100e4096931e227">Bangalore</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/weather/today/l/Hyderabad+Telangana+India?canonicalCityId=d25a11a4c7f3daef6ab9536de8f2ac43f6145afd8544cb66e2cdacdca2ba0c5a">Hyderabad</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/weather/today/l/Hyderabad+Telangana+India?canonicalCityId=d25a11a4c7f3daef6ab9536de8f2ac43f6145afd8544cb66e2cdacdca2ba0c5a">Arunachal Pradesh</a></li>
+                    <li><a class="dropdown-item" href="https://www.google.com/search?q=weather.com+gujarat&sca_esv=577390696&rlz=1C1CHBF_enIN1013IN1013&sxsrf=AM9HkKnvDRO54fLJz-8-o-EvfUXJa2KhKA%3A1698475028076&ei=FKw8ZfGnBOafseMP3KuA6Ak&ved=0ahUKEwjxgdXFkJiCAxXmT2wGHdwVAJ0Q4dUDCBA&uact=5&oq=weather.com+gujarat&gs_lp=Egxnd3Mtd2l6LXNlcnAiE3dlYXRoZXIuY29tIGd1amFyYXQyBhAAGBYYHjIGEAAYFhgeMggQABiKBRiGAzIIEAAYigUYhgMyCBAAGIoFGIYDMggQABiKBRiGA0izK1CXAljkJnABeAGQAQCYAfQBoAHiHqoBBjAuMjIuMrgBA8gBAPgBAcICChAAGEcY1gQYsAPCAgQQIxgnwgIIEAAYigUYkQLCAgUQABiABMICBxAjGIoFGCfCAgoQABiABBgUGIcC4gMEGAAgQYgGAZAGCA&sclient=gws-wiz-serp">Gujarat</a></li>
+                    <li><a class="dropdown-item" href="https://www.google.com/search?q=weather.com+basar&sca_esv=577390696&rlz=1C1CHBF_enIN1013IN1013&sxsrf=AM9HkKlTeaep3yIkvSr9BReL4YmsS2eoxA%3A1698475050276&ei=Kqw8ZZe2ELuXseMPkKeJ4AQ&ved=0ahUKEwiX85_QkJiCAxW7S2wGHZBTAkwQ4dUDCBA&uact=5&oq=weather.com+basar&gs_lp=Egxnd3Mtd2l6LXNlcnAiEXdlYXRoZXIuY29tIGJhc2FyMgUQIRigATIFECEYoAEyBRAhGKABMgUQIRigATIIECEYFhgeGB0yCBAhGBYYHhgdMggQIRgWGB4YHTIIECEYFhgeGB0yChAhGBYYHhgPGB0yCBAhGBYYHhgdSLwYUO8BWKAScAF4AZABAJgBqAKgAdAQqgEGMC4xMC4yuAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICDRAAGEcY1gQYyQMYsAPCAgsQABiKBRiSAxiwA8ICBBAjGCfCAgcQIxiKBRgnwgIIEAAYigUYkQLCAgUQABiABMICBhAAGBYYHuIDBBgAIEGIBgGQBgk&sclient=gws-wiz-serp">Basar</a></li>
+                    <li><a class="dropdown-item" href="https://www.google.com/search?q=weather.com+nizamabad&sca_esv=577390696&rlz=1C1CHBF_enIN1013IN1013&sxsrf=AM9HkKnCf2EW8UgGft8BrYH6FaA5jEz16w%3A1698475068381&ei=PKw8ZYPjFsmYseMP4JWguAk&ved=0ahUKEwiD8fDYkJiCAxVJTGwGHeAKCJcQ4dUDCBA&uact=5&oq=weather.com+nizamabad&gs_lp=Egxnd3Mtd2l6LXNlcnAiFXdlYXRoZXIuY29tIG5pemFtYWJhZDIFECEYoAEyCBAhGBYYHhgdMggQIRgWGB4YHTIIECEYFhgeGB0yCBAhGBYYHhgdMggQIRgWGB4YHTIIECEYFhgeGB0yCBAhGBYYHhgdMgoQIRgWGB4YDxgdMgoQIRgWGB4YDxgdSMYgULQDWNobcAJ4AZABAJgB-gGgAbgTqgEGMC4xMy4yuAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICDRAAGEcY1gQYyQMYsAPCAgsQABiKBRiSAxiwA8ICBBAjGCfCAgcQIxiKBRgnwgIFEAAYgATCAggQABiKBRiRAsICDhAAGIoFGLEDGMkDGJECwgIIEAAYgAQYkgPCAgoQABiABBgUGIcCwgIGEAAYFhgewgIHECEYoAEYCuIDBBgAIEGIBgGQBgo&sclient=gws-wiz-serp">Nizamabad</a></li>
+                    <li><a class="dropdown-item" href="https://www.google.com/search?q=weather.com+kamareddy&sca_esv=577390696&rlz=1C1CHBF_enIN1013IN1013&sxsrf=AM9HkKkaJRmh_M3VHbHicg3P_Cdx0SSEOA%3A1698475088352&ei=UKw8ZcvEFOjMseMPhsuskAI&ved=0ahUKEwjLrLPikJiCAxVoZmwGHYYlCyIQ4dUDCBA&uact=5&oq=weather.com+kamareddy&gs_lp=Egxnd3Mtd2l6LXNlcnAiFXdlYXRoZXIuY29tIGthbWFyZWRkeTIFECEYoAEyBRAhGKABMggQIRgWGB4YHTIIECEYFhgeGB1IsSFQrAJY1B1wAXgAkAEAmAGSAqABrhqqAQYwLjEyLja4AQPIAQD4AQHCAgQQIxgnwgIIEAAYigUYkQLCAgUQABiABMICChAAGIAEGBQYhwLCAgcQIRigARgKwgIKECEYFhgeGA8YHeIDBBgBIEGIBgE&sclient=gws-wiz-serp">KamaReddy</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/weather/tenday/l/Medchal+Telangana+India?canonicalCityId=70ee5c451bf5a163b2187dab4a04d6936886a5588b2f0165f290d535ad7d760c">Medchal</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/weather/tenday/l/40b3be4adade926d9c52c6bebbe82a7ac8daf55d5fdf06bb37d80f8db440d72e">RangaReddy</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/en-TT/weather/tenday/l/76a55a8be1f59e2fa477fe5bb3c500b647302ed301b98e4d1296260b5fe3e374">Mudhole</a></li>
+                    <li><a class="dropdown-item" href="https://weather.com/en-IN/weather/tenday/l/Narveer+Tanaji+Wadi+Maharashtra?canonicalCityId=c9591c73a867f5d9f013e7ad7bcc02e7dcdfe28e3166c52b0177a2b5405c6238">Maharashtra</a></li>
+                  </ul>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      
+    <div class="container">
+        <h1 class="my-4 text-center"><b>Weather for <span id="cityName"></span></b></h1>
+      <main>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Temperatures</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light"><span>&#8451;</span></small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li>Temperature is <span id="temp"></span></li>
+                  <li>Min Temperture is <span id="min_temp"></span></li>
+                  <li>Max Temperture is <span id="max_temp"></span></li>
+                  
+                </ul>
+                <!--<button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>-->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Humidity Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light"> %</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Degree is <span id="wind_degrees"></span></li>
+                    <li>Feels Like is <span id="feels_like"></span></li>
+                    <li>Humidity is <span id="humidity"></span></li>
+                </ul>
+                <!--<button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>-->
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+              <div class="card-header py-3 text-bg-primary border-primary">
+                <h4 class="my-0 fw-normal">Wind Info</h4>
+              </div>
+              <div class="card-body">
+                <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span><small class="text-body-secondary fw-light"> km/hr</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>Wind Speed is <span id="wind_speed"></span></li>
+                    <li>Sunrise time is <span id="sunrise"></span></li>
+                    <li>Sunset time is <span id="sunset"></span></li>
+                </ul>
+                <!--<button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>-->
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+    
+        <h2 class="display-6 text-center mb-4 ">Weather of other common places</h2>
+    
+        <div class="table-responsive">
+          <table class="table text-center">
+            <thead>
+              <tr>
+                <th style="width: 34%;"></th>
+                <th style="width: 22%;">Cloud_pct</th>
+                <th style="width: 22%;">Feels_like</th>
+                <th style="width: 22%;">Humidity</th>
+                <th style="width: 22%;">Max_temp</th>
+                <th style="width: 22%;">Min_temp</th>
+                <th style="width: 22%;">Sunrise</th>
+                <th style="width: 22%;">Sunset</th>
+                <th style="width: 22%;">Temp</th>
+                <th style="width: 22%;">Wind_degrees</th>
+                <th style="width: 22%;">Wind_speed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Shangai</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Chennai</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Hyderabad</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Arunachal Pradesh</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Boston</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+    
+            <tbody>
+              <tr>
+                <th scope="row" class="text-start">Lucknow</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <th scope="row" class="text-start">Kolkatha</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </main>
+
+      </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
